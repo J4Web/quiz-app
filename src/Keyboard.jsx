@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import "./Hangman.css";
-
-class Keyboard extends Component {
-  /** by default, allow 6 guesses and use provided gallows images. */
+import "./Keyboard.css";
+export default class Keyboard extends Component {
   static defaultProps = {
     maxWrong: 6,
   };
@@ -12,24 +10,11 @@ class Keyboard extends Component {
     this.state = {
       nWrong: 0,
       guessed: new Set(),
+      answer: "Happy",
     };
-    this.handleGuess = this.handleGuess.bind(this);
+    // this.handleGuess = this.handleGuess.bind(this);
     this.handleRestartGame = this.handleRestartGame.bind(this);
   }
-
-  /** guessedWord: show current-state of word:
-    if guessed letters are {a,p,e}, show "app_e" for "apple"
-  */
-  guessedWord() {
-    return this.state.answer
-      .split("")
-      .map((ltr) => (this.state.guessed.has(ltr) ? ltr : "_"));
-  }
-
-  /** handleGuest: handle a guessed letter:
-    - add to guessed letters
-    - if not in answer, increase number-wrong guesses
-  */
   handleGuess(evt) {
     let ltr = evt.target.value;
     this.setState((st) => ({
@@ -41,12 +26,12 @@ class Keyboard extends Component {
     this.setState((oldState) => ({
       nWrong: 0,
       guessed: new Set(),
+      answer: "Happy",
     }));
   }
   handleRestartGame() {
     this.restart();
   }
-  /** generateButtons: return array of letter buttons to render */
   generateButtons() {
     return "abcdefghijklmnopqrstuvwxyz".split("").map((k) => (
       <button
@@ -59,30 +44,12 @@ class Keyboard extends Component {
       </button>
     ));
   }
-  /** render: render game */
   render() {
     const gameOver = this.state.nWrong >= this.props.maxWrong ? 1 : 0;
-    const gameWon = this.guessedWord().join("") === this.state.answer ? 1 : 0;
+    // const gameWon = this.guessedWord().join("") === this.state.answer ? 1 : 0;
+    const gameWon = 0;
     return (
       <div className="Hangman">
-        <h1>Hangman</h1>
-        {!gameOver && !gameWon && (
-          <img
-            src={this.props.images[this.state.nWrong]}
-            alt={`${this.state.nWrong} Wrong attempts`}
-          />
-        )}
-        {!gameOver ? (
-          <p className="Hangman-word">{this.guessedWord()}</p>
-        ) : (
-          <h2>{`The Word Was : ${this.state.answer}`}</h2>
-        )}
-        {!gameOver ? (
-          <p>Wrong Guesses : {this.state.nWrong}</p>
-        ) : (
-          <p>You Lost BOOOOO</p>
-        )}
-        {gameWon ? <h3>"CONGRATS YOU WON AND YOU ROCK!"</h3> : null}
         <p className="Hangman-btns">
           {!gameOver && !gameWon ? (
             this.generateButtons()
@@ -96,4 +63,3 @@ class Keyboard extends Component {
     );
   }
 }
-export default Keyboard;
