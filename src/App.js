@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Header />
       <Home />
-      <Keyboard />
+      {/* <Keyboard /> */}
     </div>
   );
 }

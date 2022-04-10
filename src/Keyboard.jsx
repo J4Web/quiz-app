@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import "./Keyboard.css";
+import PickRandomQuestion from "./Data";
 export default class Keyboard extends Component {
   static defaultProps = {
     maxWrong: 6,
   };
-
   constructor(props) {
     super(props);
     this.state = {
       nWrong: 0,
       guessed: new Set(),
-      answer: "Happy",
+      answer: PickRandomQuestion().answers,
     };
     // this.handleGuess = this.handleGuess.bind(this);
     this.handleRestartGame = this.handleRestartGame.bind(this);

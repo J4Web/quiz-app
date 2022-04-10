@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import MyButton from "../util/MyButton.jsx";
+import MyButton from "./MyButton";
 import Fade from "react-reveal/Fade";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+
 class Popup extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       time: "start",
       title: "Welcome to React Quiz",
@@ -17,7 +17,7 @@ class Popup extends Component {
   }
 
   popupHandle() {
-    let { time } = this.state;
+    let time = this.state.time;
 
     if (time === "start") {
       this.setState({
@@ -25,12 +25,12 @@ class Popup extends Component {
         title: "Congratulations!",
         buttonText: "Restart",
       });
-
-      //alert("START THE QUIZ");
       this.props.startQuiz();
+      //alert("START THE QUIZ");
     } else {
-      //alert("FINISHED QUIZ");
-      //   useNavigate('/'); // restart the application
+      // alert("FINISHED QUIZ");
+      // eslint-disable-next-line no-restricted-globals
+      location.reload(); // restart the application
     }
   }
 

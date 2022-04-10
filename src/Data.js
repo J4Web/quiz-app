@@ -1,37 +1,42 @@
-const a = [
+const data = [
   {
     question:
       "We can go for keys when there is possibility that our user could change the data?",
-    answers: ["Keys"],
+    answers: "Keys",
   },
 
   {
     question: "JSX is typesafe? True/False ?",
-    answers: ["True", "False", "None of the Above", "Cannot Be Determined"],
+    answers: "True",
   },
   {
     question:
       "React merges the object you provide into the current state using which of the following",
-    answers: ["setState()"],
+    answers: "setState",
   },
   {
     question: "Arbitrary inputs of components are called?",
-    answers: ["Props"],
+    answers: "Props",
   },
   {
     question:
       "_____ can be done while more than one element needs to be returned from a component?",
-    answers: ["Wrapping"],
+    answers: "Wrapping",
   },
   {
     question:
       "Which of the following needs to be updated to achieve dynamic UI updates?",
-    answers: ["State", "Props", "Components", "None of the Above"],
+    answers: "State",
   },
   {
-    question: "Lifecycle methods are mainly used _____",
-    answers: ["To keep track of event history", "To enhance components"],
+    question: "Lifecycle methods are mainly used to track_____ ?",
+    answers: "History",
   },
 ];
 
-export default a;
+function PickRandomQuestion() {
+  const random = Math.floor(Math.random() * data.length) + 1;
+  return data[random];
+}
+export { data };
+export default PickRandomQuestion;
