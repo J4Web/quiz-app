@@ -17,21 +17,22 @@ class Popup extends Component {
   }
 
   popupHandle() {
-    let time = this.state.time;
+    // let time = this.state.time;
+    this.props.startQuiz();
 
-    if (time === "start") {
-      this.setState({
-        time: "end",
-        title: "Congratulations!",
-        buttonText: "Restart",
-      });
-      this.props.startQuiz();
-      //alert("START THE QUIZ");
-    } else {
-      // alert("FINISHED QUIZ");
-      // eslint-disable-next-line no-restricted-globals
-      location.reload(); // restart the application
-    }
+    // if (time === "start") {
+    //   this.setState({
+    //     time: "end",
+    //     title: "Congratulations!",
+    //     buttonText: "Restart",
+    //   });
+    //   this.props.startQuiz();
+    //   //alert("START THE QUIZ");
+    // } else {
+    //   // alert("FINISHED QUIZ");
+    //   // eslint-disable-next-line no-restricted-globals
+    //   location.reload(); // restart the application
+    // }
   }
 
   createMarkup(text) {
@@ -62,9 +63,7 @@ class Popup extends Component {
               <div className="popup">
                 <h1>{title}</h1>
                 <p dangerouslySetInnerHTML={this.createMarkup(text)} />
-                <span onClick={this.popupHandle}>
-                  <MyButton text={buttonText} bck="#FF9800" color="#fff" />
-                </span>
+                <button onClick={this.popupHandle}>START THE QUIZ!</button>
               </div>
             </div>
           </div>

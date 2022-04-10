@@ -5,6 +5,7 @@ import "./Home.css";
 import Button from "@mui/material/Button";
 import Popup from "./PopUp";
 import { data } from "./Data";
+import WithRoutes from "./WithRoutes";
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -18,14 +19,11 @@ class Home extends Component {
     };
     // this.nextQuestion = this.nextQuestion.bind(this);
     // this.handleShowButton = this.handleShowButton.bind(this);
-    // this.handleStartQuiz = this.handleStartQuiz.bind(this);
+    this.handleStartQuiz = this.handleStartQuiz.bind(this);
     // this.handleIncreaseScore = this.handleIncreaseScore.bind(this);
   }
   handleStartQuiz() {
-    this.setState({
-      displayPopup: false,
-      count: 1,
-    });
+    this.props.router.navigate(`/quiz`);
   }
 
   render() {
@@ -56,4 +54,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default WithRoutes(Home);
