@@ -1,0 +1,18 @@
+.container {
+  height: 80vh;
+}
+.levels {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+}
+
+.levels button {
+  margin-top: 1em;
+}
+.levels .btn {
+  padding: 13.2px 24px;
+}
