@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Keyboard.css";
 import PickRandomQuestion from "./Data";
 import { NavLink } from "react-router-dom";
+import level from "./Level";
 import Quiz from "./Quiz";
 export default class Keyboard extends Component {
   static defaultProps = {
@@ -60,6 +61,7 @@ export default class Keyboard extends Component {
     this.setState((curState) => ({
       answer: PickRandomQuestion().answers,
       doneSoFar: curState.doneSoFar + 1,
+      guessed: new Set(),
     }));
   }
   render() {
@@ -67,6 +69,7 @@ export default class Keyboard extends Component {
     const gameWon = this.guessedWord().join("") === this.state.answer ? 1 : 0;
     return (
       <div className="Hangman">
+        <div className="level">{level(this.state.doneSoFar / 3)}</div>
         {!gameOver ? (
           <p className="Hangman-word">{this.guessedWord()}</p>
         ) : (
