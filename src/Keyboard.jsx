@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Keyboard.css";
 import PickRandomQuestion from "./Data";
 import { NavLink } from "react-router-dom";
+import Quiz from "./Quiz";
 export default class Keyboard extends Component {
   static defaultProps = {
     maxWrong: 3,
@@ -26,7 +27,6 @@ export default class Keyboard extends Component {
   }
   handleGuess(evt) {
     let ltr = evt.target.value;
-
     this.setState((st) => ({
       guessed: st.guessed.add(ltr),
       nWrong: st.nWrong + (st.answer.includes(ltr) ? 0 : 1),
