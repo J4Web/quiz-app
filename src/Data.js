@@ -7,30 +7,30 @@ const data = [
 
   {
     question: "JSX is typesafe? True/False ?",
-    answers: "True",
+    answers: "true",
   },
   {
     question:
       "React merges the object you provide into the current state using which of the following",
-    answers: "setState",
+    answers: "setstate",
   },
   {
     question: "Arbitrary inputs of components are called?",
-    answers: "Props",
+    answers: "props",
   },
   {
     question:
       "_____ can be done while more than one element needs to be returned from a component?",
-    answers: "Wrapping",
+    answers: "wrapping",
   },
   {
     question:
       "Which of the following needs to be updated to achieve dynamic UI updates?",
-    answers: "State",
+    answers: "state",
   },
   {
     question: "Lifecycle methods are mainly used to track_____ ?",
-    answers: "History",
+    answers: "history",
   },
 ];
 

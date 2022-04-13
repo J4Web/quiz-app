@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Home.css";
-import Button from "@mui/material/Button";
 import Popup from "./PopUp";
 import { data } from "./Data";
 import WithRoutes from "./WithRoutes";
@@ -36,18 +35,6 @@ class Home extends Component {
             total={this.state.total}
             startQuiz={this.handleStartQuiz}
           />
-
-          <div className="levels">
-            {/* <Button className="btn" variant="contained">
-            Easy
-          </Button>
-          <Button className="btn" variant="contained">
-            Medium
-          </Button>
-          <Button className="btn" variant="contained">
-            Hard
-          </Button> */}
-          </div>
         </div>
       </div>
     );
