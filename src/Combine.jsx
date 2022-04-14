@@ -25,7 +25,8 @@ class Combine extends Component {
     this.setState({ ques: PickRandomQuestion() });
   }
   handleClick() {
-    this.props.router.navigate("/");
+    // location.reload();
+    console.log("end");
   }
   render() {
     return (
@@ -39,7 +40,7 @@ class Combine extends Component {
         ) : (
           <div>
             <h1>Congratulations! You passed the quiz...</h1>
-            <NavLink onClick={this.handleClick}>Retake!</NavLink>
+            <button onClick={this.handleClick}>Retake!</button>
           </div>
         )}
       </div>

@@ -6,6 +6,7 @@ import Header from "./Header";
 import Keyboard from "./Keyboard";
 import { MemoryRouter, Routes, Route } from "react-router-dom";
 import Quiz from "./Quiz";
+import Error from "./Error";
 import Combine from "./Combine";
 // import Footer from "./Footer";
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/quiz" element={<Combine />} />
+        <Route path="*" element={<Error />} />
       </Routes>
       {/* <Keyboard /> */}
     </div>
