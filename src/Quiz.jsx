@@ -1,15 +1,19 @@
 import React, { Component } from "react";
 import Keyboard from "./Keyboard";
 import "./Quiz.css";
-import PickRandomQuestion, { Data } from "./Data";
 class Quiz extends Component {
   render() {
+    const { question } = this.props.question;
     return (
       <div className="quiz-container">
         <div className="content">
           <h1>Quiz page</h1>
-          {PickRandomQuestion().question}
-          <Keyboard />
+          <h3>{question}</h3>
+          <Keyboard
+            ans={this.props.question}
+            check={this.props.click}
+            destroy={this.props.destroy}
+          />
         </div>
       </div>
     );
