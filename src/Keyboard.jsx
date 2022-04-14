@@ -10,7 +10,7 @@ export default class Keyboard extends Component {
     super(props);
     this.state = {
       nWrong: 0,
-      doneSoFar: 0,
+      doneSoFar: 1,
       level: 0,
       guessed: new Set(),
     };
@@ -61,6 +61,7 @@ export default class Keyboard extends Component {
       doneSoFar: curState.doneSoFar + 1,
       guessed: new Set(),
     }));
+    this.props.destroy(this.state.doneSoFar);
   }
   render() {
     const gameOver = this.state.nWrong >= this.props.maxWrong ? 1 : 0;
