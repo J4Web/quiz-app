@@ -4,6 +4,8 @@ import { NavLink } from "react-router-dom";
 import level from "./Level";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
+import Snackbar from "@mui/material/Snackbar";
+import Slide from "@mui/material/Slide";
 
 export default class Keyboard extends Component {
   static defaultProps = {
@@ -58,6 +60,18 @@ export default class Keyboard extends Component {
       </button>
     ));
   }
+  handleOpen() {
+    const level = this.state.doneSoFar / 3;
+    let res = false;
+    if ((level >= 1 && level <= 2) || (level >= 2 && level <= 3)) {
+      res = true;
+      return res;
+    }
+    setTimeout(function () {
+      res = false;
+      return res;
+    }, 3000);
+  }
   handleNextQuestion() {
     this.props.check();
     this.setState((curState) => ({
@@ -65,6 +79,9 @@ export default class Keyboard extends Component {
       guessed: new Set(),
     }));
     this.props.destroy(this.state.doneSoFar);
+  }
+  TransitionLeft(props) {
+    return <Slide {...props} direction="left" />;
   }
   render() {
     const gameOver = this.state.nWrong >= this.props.maxWrong ? 1 : 0;

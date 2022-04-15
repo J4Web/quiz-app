@@ -88,3 +88,12 @@
   top: 10%;
   left: 83%;
 }
+
+#snackbar {
+  width: 40%;
+  /* background: #fff; */
+  color: green;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
