@@ -3,7 +3,9 @@ import Quiz from "./Quiz";
 import Keyboard from "./Keyboard";
 import PickRandomQuestion from "./Data";
 import WithRoutes from "./WithRoutes";
-import { NavLink } from "react-router-dom";
+import MyButton from "./MyButton";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import "./Combine.css";
 class Combine extends Component {
   constructor(props) {
     super(props);
@@ -25,22 +27,28 @@ class Combine extends Component {
     this.setState({ ques: PickRandomQuestion() });
   }
   handleClick() {
-    // location.reload();
-    console.log("end");
+    window.history.back();
   }
   render() {
     return (
-      <div>
+      <div className="quiz">
         {this.state.exist ? (
           <Quiz
             question={this.state.ques}
+            q={this.state.ques.question}
+            a={this.state.ques.answers}
             click={this.check}
             destroy={this.destroy}
           />
         ) : (
-          <div>
+          <div className="end-quiz">
             <h1>Congratulations! You passed the quiz...</h1>
-            <button onClick={this.handleClick}>Retake!</button>
+            <MyButton
+              onClick={this.handleClick}
+              text="Retake!"
+              bck="#FF9800"
+              color="#fff"
+            />
           </div>
         )}
       </div>

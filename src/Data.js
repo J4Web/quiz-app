@@ -2,7 +2,7 @@ const data = [
   {
     question:
       "We can go for keys when there is possibility that our user could change the data?",
-    answers: "Keys",
+    answers: "keys",
   },
 
   {
@@ -35,7 +35,7 @@ const data = [
 ];
 
 function PickRandomQuestion() {
-  const random = Math.floor(Math.random() * data.length) + 1;
+  const random = Math.floor(Math.random() * data.length);
   return data[random];
 }
 export { data };

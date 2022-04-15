@@ -1,6 +1,31 @@
 .popup-container {
+  margin-top: -12.5em;
+  height: -100vh;
+  overflow: hidden;
+}
+.container {
   display: flex;
+  align-items: center;
+  /* display: flex;
   justify-content: center;
   align-items: center;
-  background: #000;
+  text-align: center; */
+  /* background: #000; */
+  /* transform: translate(-50%, -50%); */
+  /* align-self: center; */
+  /* margin: 2em; */
+  max-width: 55%;
+  /* position: absolute;
+  left: 0;
+  right: 0; */
+  /* border-top: 1px solid #000; */
+  /* margin: auto; */
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    max-width: 90%;
+    margin-left: 25.4px;
+    margin-top: 21%;
+  }
 }

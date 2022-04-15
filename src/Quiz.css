@@ -1,6 +1,11 @@
 .quiz-container {
   height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
+  flex-direction: column;
+  text-align: center;
 }
 
 .content {
@@ -8,6 +13,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 20em;
+  margin-top: 13%;
   overflow: hidden;
 }

@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import "./Keyboard.css";
 import { NavLink } from "react-router-dom";
 import level from "./Level";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import RestartAltIcon from "@mui/icons-material/RestartAlt";
+import Chip from "@mui/material/Chip";
 export default class Keyboard extends Component {
   static defaultProps = {
     maxWrong: 3,
@@ -80,12 +83,12 @@ export default class Keyboard extends Component {
             this.generateButtons()
           ) : (
             <button
-              id="restart-game"
+              id="btn"
               onClick={
                 gameWon ? this.handleNextQuestion : this.handleRestartGame
               }
             >
-              {gameWon ? "Next" : "Restart"}
+              {gameWon ? <ArrowForwardIosIcon /> : <RestartAltIcon />}
             </button>
           )}
         </p>

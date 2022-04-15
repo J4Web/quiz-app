@@ -3,6 +3,11 @@
   color: black;
   text-align: center;
   zoom: 1.3;
+  display: flex;
+  justify-content: content;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 .Hangman img {
@@ -69,4 +74,17 @@
   background: rgb(169, 169, 184);
   width: 100%;
   box-shadow: 0 0px rgb(189, 189, 211);
+}
+
+#btn {
+  margin-top: 7%;
+  width: 50%;
+  padding: 6px;
+  text-align: center;
+}
+
+.level {
+  position: absolute;
+  top: 10%;
+  left: 80%;
 }

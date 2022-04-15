@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import MyButton from "./MyButton";
 import Fade from "react-reveal/Fade";
 // import { useNavigate } from "react-router-dom";
+import "./PopUp.css";
 
 class Popup extends Component {
   constructor(props) {
@@ -56,6 +57,19 @@ class Popup extends Component {
     let { style } = this.props;
 
     return (
+      // <Fade delay={500}>
+      //   <div className="popup-container" style={style}>
+      //     <div className="container">
+      //       <div className="ml-5 col-md-10 col-10">
+      //         <div className="popup">
+      //           <h1>{title}</h1>
+      //           <p dangerouslySetInnerHTML={this.createMarkup(text)} />
+      //           <button onClick={this.popupHandle}>START THE QUIZ!</button>
+      //         </div>
+      //       </div>
+      //     </div>
+      //   </div>
+      // </Fade>
       <Fade delay={500}>
         <div className="popup-container" style={style}>
           <div className="container">
@@ -63,7 +77,9 @@ class Popup extends Component {
               <div className="popup">
                 <h1>{title}</h1>
                 <p dangerouslySetInnerHTML={this.createMarkup(text)} />
-                <button onClick={this.popupHandle}>START THE QUIZ!</button>
+                <span onClick={this.popupHandle}>
+                  <MyButton text={buttonText} bck="#FF9800" color="#fff" />
+                </span>
               </div>
             </div>
           </div>
