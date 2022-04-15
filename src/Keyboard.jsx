@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import level from "./Level";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
-import Chip from "@mui/material/Chip";
+
 export default class Keyboard extends Component {
   static defaultProps = {
     maxWrong: 3,
@@ -44,7 +44,7 @@ export default class Keyboard extends Component {
     }));
   }
   handleRestartGame() {
-    this.restart();
+    window.history.go(-1);
   }
   generateButtons() {
     return "abcdefghijklmnopqrstuvwxyz".split("").map((k) => (
