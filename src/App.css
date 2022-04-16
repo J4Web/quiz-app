@@ -9,7 +9,7 @@
   height: 100vh;
   font-family: "Roboto", "sans-serif";
   font-weight: 400;
-  height: 110vh;
-  margin-left: 6.5%;
+  height: 100vh;
+  /* margin-left: -6.5%; */
   /* margin-bottom: -100%; */
 }
