@@ -16,10 +16,8 @@ class Home extends Component {
       score: 0,
       displayPopup: "flex",
     };
-    // this.nextQuestion = this.nextQuestion.bind(this);
-    // this.handleShowButton = this.handleShowButton.bind(this);
+
     this.handleStartQuiz = this.handleStartQuiz.bind(this);
-    // this.handleIncreaseScore = this.handleIncreaseScore.bind(this);
   }
   handleStartQuiz() {
     this.props.router.navigate(`/quiz`);

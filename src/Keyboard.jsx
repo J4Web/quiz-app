@@ -91,7 +91,7 @@ export default class Keyboard extends Component {
         {!gameOver ? (
           <p className="Hangman-word">{this.guessedWord()}</p>
         ) : (
-          <h2>{`The Word Was : ${this.props.ans.answers}`}</h2>
+          <h2>{`Word Was : ${this.props.ans.answers}`}</h2>
         )}
         <p className="Hangman-btns">
           {!gameOver && !gameWon ? (

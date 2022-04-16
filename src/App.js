@@ -8,7 +8,6 @@ import { MemoryRouter, Routes, Route } from "react-router-dom";
 import Quiz from "./Quiz";
 import Error from "./Error";
 import Combine from "./Combine";
-// import Footer from "./Footer";
 function App() {
   return (
     <div className="App">

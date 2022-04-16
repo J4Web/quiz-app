@@ -1,18 +1,14 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .App {
   background: rgb(168, 160, 160);
   height: 100vh;
   font-family: "Roboto", "sans-serif";
   font-weight: 400;
-  height: 100vh;
-  /* margin-right: 10%; */
+  height: 110vh;
+  /* margin-right: -4.5%; */
+  /* margin-bottom: 10%; */
 }
-
-.App::-webkit-scrollbar {
-  display: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }

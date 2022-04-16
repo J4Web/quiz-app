@@ -8,6 +8,8 @@
   align-items: center;
   flex-direction: column;
   text-align: center;
+  /* overflow: hidden; */
+  margin-right: -10%;
 }
 
 .Hangman img {
