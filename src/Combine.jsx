@@ -21,7 +21,7 @@ class Combine extends Component {
     this.setState({
       exist: val + 1 > 9 ? false : true,
     });
-    console.log(val);
+    // console.log(val);
   }
   check() {
     this.setState({ ques: PickRandomQuestion() });
@@ -43,12 +43,9 @@ class Combine extends Component {
         ) : (
           <div className="end-quiz">
             <h1>Congratulations! You passed the quiz...</h1>
-            <MyButton
-              onClick={this.handleClick}
-              text="Retake!"
-              bck="#FF9800"
-              color="#fff"
-            />
+            <button className="btn" onClick={this.handleClick}>
+              ReTake!
+            </button>
           </div>
         )}
       </div>

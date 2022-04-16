@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import "./Keyboard.css";
-import { NavLink } from "react-router-dom";
 import level from "./Level";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
-import Snackbar from "@mui/material/Snackbar";
 import Slide from "@mui/material/Slide";
 
 export default class Keyboard extends Component {

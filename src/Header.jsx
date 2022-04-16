@@ -28,7 +28,7 @@ function DenseAppBar(props) {
       <AppBar position="static" className={classes.color}>
         <Toolbar variant="dense">
           <Typography variant="h6" className={classes.whiteColor}>
-            React Quiz
+            Programming Quiz
           </Typography>
         </Toolbar>
       </AppBar>

@@ -9,8 +9,8 @@ class Popup extends Component {
     super(props);
     this.state = {
       time: "start",
-      title: "Welcome to React Quiz",
-      text: "This is a quiz application built using ReactJS. <br /><br />",
+      title: "Welcome to the Programming Quiz!",
+      text: "This Quiz has 3 levels. Each Level contains 3 questions each. If you fail at any level you start again! GoodLuck 👍 <br /><br />",
       buttonText: "Start the quiz",
     };
 
@@ -40,36 +40,12 @@ class Popup extends Component {
     return { __html: text };
   }
 
-  componentWillReceiveProps(nextProps) {
-    this.setState({
-      text:
-        "You have completed the quiz. <br /> You got: <strong>" +
-        this.props.score +
-        "</strong> out of <strong>" +
-        this.props.total +
-        "</strong> questions right.",
-    });
-  }
-
   render() {
     let { title, text, buttonText } = this.state;
 
     let { style } = this.props;
 
     return (
-      // <Fade delay={500}>
-      //   <div className="popup-container" style={style}>
-      //     <div className="container">
-      //       <div className="ml-5 col-md-10 col-10">
-      //         <div className="popup">
-      //           <h1>{title}</h1>
-      //           <p dangerouslySetInnerHTML={this.createMarkup(text)} />
-      //           <button onClick={this.popupHandle}>START THE QUIZ!</button>
-      //         </div>
-      //       </div>
-      //     </div>
-      //   </div>
-      // </Fade>
       <Fade delay={500}>
         <div className="popup-container" style={style}>
           <div className="container">

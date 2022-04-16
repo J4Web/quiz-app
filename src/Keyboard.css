@@ -26,7 +26,8 @@
 .Hangman-word {
   letter-spacing: 1em;
   margin: 0.4em -1em 0.2em 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  max-width: 90%;
 }
 
 .Hangman-btns {
@@ -87,13 +88,4 @@
   position: absolute;
   top: 10%;
   left: 83%;
-}
-
-#snackbar {
-  width: 40%;
-  /* background: #fff; */
-  color: green;
-  border: none;
-  outline: none;
-  text-decoration: none;
 }

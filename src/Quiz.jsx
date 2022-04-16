@@ -7,7 +7,7 @@ class Quiz extends Component {
     return (
       <div className="quiz-container">
         <div className="content">
-          <h1>Quiz page</h1>
+          <h1>Quiz Section</h1>
           <h3>{q}</h3>
         </div>
         <Keyboard
