@@ -8,7 +8,7 @@ class Quiz extends Component {
       <div className="quiz-container">
         <div className="content">
           <h1>Quiz Section</h1>
-          <h3>{q}</h3>
+          <h3 className="question">{q}</h3>
         </div>
         <Keyboard
           ans={this.props.question}

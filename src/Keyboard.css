@@ -89,3 +89,18 @@
   top: 10%;
   left: 83%;
 }
+
+@media (max-width: 500px) {
+  .Hangman-btns {
+    text-align: center;
+    display: inline-block;
+    width: 200px;
+    margin-top: 0;
+  }
+  .Hangman-word {
+    letter-spacing: 0.5em;
+    margin: 0.4em -1em 0.2em 0;
+    font-size: 1.5rem;
+    max-width: 90%;
+  }
+}
