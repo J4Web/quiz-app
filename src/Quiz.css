@@ -1,5 +1,5 @@
 .quiz-container {
-  height: 100vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,6 +8,7 @@
   text-align: center;
   width: 100%;
   overflow: hidden;
+  margin-bottom: -10%;
 }
 
 .content {
@@ -20,18 +21,21 @@
   width: 100%;
 }
 
-@media (max-width: 500px) {
+@media (min-width: 500px) {
   .content {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 10%;
+    margin-top: 0%;
     /* overflow: hidden; */
-    width: 100%;
+    /* width: 100%; */
     font-size: 4px;
+    /* margin-top: 30%; */
+    /* margin-bottom: -20%; */
+    /* margin-top: 10%; */
   }
   .content > h3 {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
