@@ -24,7 +24,7 @@ const data = [
   },
   {
     question: "A common boundary between two systems is called?",
-    answers: " interface",
+    answers: "interface",
   },
   {
     question:
@@ -33,7 +33,7 @@ const data = [
   },
   {
     question: "	The complete picture of data stored in database is known as? ",
-    answers: "schema ",
+    answers: "schema",
   },
   {
     question:
